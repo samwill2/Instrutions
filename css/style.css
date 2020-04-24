@@ -3,6 +3,8 @@
 body { 
     font-family: Helvetica, sans-serif;
     font-size: 16px;
+    overflow: hidden;
+    max-width: 75ch;
      }
 
 h1, h2, h3, h4 {
@@ -27,6 +29,10 @@ h4 {
 blockquote {
     margin: 20px 60px;
     font-family: Helvetica, sans-serif;
+    text-align: center;
+    overflow: hidden;
+    max-width: 60ch;
+
 }
 
 header {margin-bottom: 20px;}
@@ -35,7 +41,7 @@ header {margin-bottom: 20px;}
 img { width: 100%; }
 
 a { 
-    color: red;
+    color: ;
     text-decoration: none;
      }
 a:hover { color: black; }
@@ -51,6 +57,24 @@ a:hover { color: black; }
 .grid div {
     background-color: #ccc;
     padding: 20px;
+
+}
+canvas {
+  background: 
+    linear-gradient(
+      hsl(230, 50%, 80%) 0%, 
+      hsl(120, 30%, 95%) 75%)
+  ;
+  display: block;
+}
+
+div {
+  background: url(https://jackrugile.com/images/misc/skyline-texture.png);
+  height: 100%;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
 }
 
 @media only screen and (min-width:768px) {
