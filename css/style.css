@@ -1,20 +1,76 @@
 /* Enter your Styles below! */
 
-body {
-        margin: 0;
-        padding: 0;
-        height: 100%;
-        background: url("/imgaes/dog-collar_n.jpg");
-     
-        background-size: cover;
-    }
+
+    @import "compass/css3";
+* {
+    box-sizing: border-box;
+}
+html, body 
+{
+    background-color: #fff;
+
+}
+.parallax
+{
+    perspective: 100px;
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    right: 0;
+    bottom: 0;
+    margin-left: -800px;
+
+
+}
+#header{
+  position: absolute;
+  z-index: 1000;
+  top: 200px;
+  left: 200px;}
+  
+.parallax_0
+{
+    position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  
+  img{
+    display: block;
+    position: absolute;
+    bottom: 0;
+  }
+}
+
+}
+.parallax_cover{
+  display: block;
+  position: fixed;
+  top: 100%;
+  left: 0;
+  right: 0;
+  height: 2000px;
+  z-index: 2;
+}
+
+$parallax__layers: 6;
+
+@for $i from 0 through $parallax__layers {
+  $x: ($parallax__layers - $i) / 2;
+  .parallax__layer__#{$i}{
+     transform: translateZ(-100 * $x#{px}) scale($x + 1);
+  }
+}
 
 
 
 
-/*
 
-    }
+    /*
     .wrapper {
         width: 100vw;
         height: 100vh;
@@ -28,9 +84,9 @@ body {
         width: 100vw;
         height: 100vh;
     }
-    .text {
-        background: url(cloud.png) 
-        center center;
+    .cloud {
+        background-image:  url("images/cloud.png") 
+    ;
         background-size: cover;
         transform: translate3d(0, 30px, 0);
         opacity: 0;
@@ -38,8 +94,8 @@ body {
         animation-fill-mode: forwards;
     }
     .cloud {
-        background: url(cloud.png) 
-        center center;
+        background-image:  url("images/cloud.png") 
+     ;
         background-size: cover;
         transform: scale3d(1.1, 1.1, 1.1);
         opacity: 0.2;
@@ -48,8 +104,8 @@ body {
     }
 
 .cloud2 {
-        background:url(cloud2.png) 
-        center center;
+        background-image:url("images/cloud2.png") 
+   ;
         background-size: cover;
         transform: scale3d(1.3, 1.3, 1.3);
         opacity: 0.1;
@@ -57,7 +113,7 @@ body {
         animation-fill-mode: forwards;
     }
     .hill1 {
-        background:url(hill1.png);
+        background-image:url("images/hill1.png");
         background-size: cover;
         transform: scale3d(1.5, 1.5, 1.5);
         opacity: 0.1;
@@ -66,8 +122,8 @@ body {
 
     }
     .hill2 {
-        background: url(hill2.png) 
-        center center;
+        background-image: url("images/hill2.png") 
+        ;
         background-size: cover;
         transform: scale3d(1.6, 1.6, 1.6);
         opacity: 0.1;
@@ -75,8 +131,7 @@ body {
         animation-fill-mode: forwards;
     }
     .hill4 {
-        background: url(hill4.png) 
-        center center;
+        background-image: url("images/hill4.png");
         background-size: cover;
         transform: scale3d(1.7, 1.7, 1.7);
         opacity: 0.1;
