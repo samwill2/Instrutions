@@ -1,72 +1,99 @@
 /* Enter your Styles below! */
 
-
-    @import "compass/css3";
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
-html, body 
-{
-    background-color: #fff;
 
+html,
+body {
+  background-color: #FEDCC8;
+  position: relative;
 }
-.parallax
-{
-    perspective: 100px;
-    height: 100vh;
-    overflow-x: hidden;
-    overflow-y: auto;
-    position: fixed;
-    top: 0;
-    left: 50%;
-    right: 0;
-    bottom: 0;
-    margin-left: -800px;
-
-
+main {
+  z-index: 1;
 }
-#header{
+.intro {
+  width: 60%;
+  margin: 180px auto 0 auto;
+}
+.parallax {
+  z-index: -1;
+  -webkit-perspective: 100px;
+          perspective: 100px;
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
   position: absolute;
-  z-index: 1000;
-  top: 200px;
-  left: 200px;}
-  
-.parallax_0
-{
-    position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.parallax__layer {
+  position: absolute;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
-  
-  img{
-    display: block;
-    position: absolute;
-    bottom: 0;
-  }
+}
+.parallax__layer img {
+  display: block;
+  position: absolute;
+  bottom: 0;
 }
 
-}
-.parallax_cover{
-  display: block;
+.nav{
+  z-index: 3;
   position: fixed;
-  top: 100%;
+  top: 20px;
+  left: 20px;
+}
+.parallax__cover {
+  background-image: url('../images/cover1.png');
+  background-repeat: no-repeat;
+  display: block;
+  position: absolute;
+  top: 70%;
   left: 0;
   right: 0;
   height: 2000px;
-  z-index: 2;
+
 }
 
-$parallax__layers: 6;
-
-@for $i from 0 through $parallax__layers {
-  $x: ($parallax__layers - $i) / 2;
-  .parallax__layer__#{$i}{
-     transform: translateZ(-100 * $x#{px}) scale($x + 1);
-  }
+.parallax__layer__0 {
+  -webkit-transform: translateZ(-300px) scale(4);
+          transform: translateZ(-300px) scale(4);
 }
 
+.parallax__layer__1 {
+  -webkit-transform: translateZ(-250px) scale(3.5);
+          transform: translateZ(-250px) scale(3.5);
+}
 
+.parallax__layer__2 {
+  -webkit-transform: translateZ(-200px) scale(3);
+          transform: translateZ(-200px) scale(3);
+}
+
+.parallax__layer__3 {
+  -webkit-transform: translateZ(-150px) scale(2.5);
+          transform: translateZ(-150px) scale(2.5);
+}
+
+.parallax__layer__4 {
+  -webkit-transform: translateZ(-100px) scale(2);
+          transform: translateZ(-100px) scale(2);
+}
+
+.parallax__layer__5 {
+  -webkit-transform: translateZ(-50px) scale(1.5);
+          transform: translateZ(-50px) scale(1.5);
+}
+
+.parallax__layer__6 {
+  -webkit-transform: translateZ(0px) scale(1);
+          transform: translateZ(0px) scale(1);
+}
 
 
 
@@ -185,7 +212,6 @@ header {margin-bottom: 20px;}
 img { width: 100%; }
 
 a { 
-    color: ;
     text-decoration: none;
      }
 a:hover { color: black; }
@@ -212,14 +238,7 @@ canvas {
   display: block;
 }
 
-div { 
- 
-  height: 100%;
-  left: 0;
-  position: fixed;
-  top: 0;
-  width: 100%;
-}
+
 
 @media only screen and (min-width:768px) {
 
