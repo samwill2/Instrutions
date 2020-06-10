@@ -209,6 +209,7 @@ h1, h2, h3, h4 {
 
 h1 {
     font-size: 48px;
+
 }
 
 h2 {
@@ -231,7 +232,9 @@ blockquote {
 
 }
 
-header {margin-bottom: 20px;}
+header {margin-bottom: 20px;
+background-color: #000;
+}
 
 /* ensures that your images stretch the width of their containers */
 img { width: 100%; }
